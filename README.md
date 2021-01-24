@@ -22,14 +22,36 @@ start esx_upgraded_duty
 ```
 
 ## Make off duty jobs	
-- Just need excacute the command in your `cmd` like this:
+- Just need excacute like this:
 ```bash
 CreateOffDutyJob [jobname]
 CreateOffDutyJob ambulance
 ```
 
+## Exports	
+#### Client
+
+| Export                         | Description                               | Parameter(s)  | Return type          |
+|--------------------------------|-------------------------------------------|---------------|----------------------|
+| CheckDuty                      | Returns player is on duty or not          |               | true or false or nil |
+| GetOffDutyJobs                 | Returns list of off duty jobs             |               | table                |
+| GetOnDutyJobs                  | Returns list of on duty jobs              |               | table                |
+| IsJobOnDuty                    | Returns that job is on duty job or not    | string        | true or false or nil |
+| IsJobOffDuty                   | Returns that job is off duty job or not   | string        | true or false or nil |
+
+#### Server
+
+| Export                         | Description                               | Parameter(s)  | Return type          |
+|--------------------------------|-------------------------------------------|---------------|----------------------|
+| CheckDuty                      | Returns player id is on duty or not       | int           | true or false or nil |
+| GetOffDutyJobs                 | Returns list of off duty jobs             |               | table                |
+| GetOnDutyJobs                  | Returns list of on duty jobs              |               | table                |
+| IsJobOnDuty                    | Returns that job is on duty job or not    | string        | true or false or nil |
+| IsJobOffDuty                   | Returns that job is off duty job or not   | string        | true or false or nil |
+
+
 
 # Credits
 
-## Resources used:
+###  Resources used:
 - [esx_duty](https://github.com/qalle-git/esx_duty)
