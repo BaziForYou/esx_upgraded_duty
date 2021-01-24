@@ -36,7 +36,7 @@ start esx_upgraded_duty
 ```
 
 ## Make off duty jobs	
-- Just need to execute like this:
+- Just need to execute the command in your `cmd` like this:
 ```bash
 CreateOffDutyJob [jobname]
 CreateOffDutyJob ambulance
