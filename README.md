@@ -1,3 +1,17 @@
+# Features
+- Create off duty jobs just with one command
+- Much optimizer than others and get low usage (0.1 and 0.20% on idle)
+- Have lots of exports for scripting like blocking something for on duty on other scripts
+- Multi help options on config
+- Multi notify options on config
+- Multi-color for on and off duty
+- Multi-color for on and off duty
+- Added more locates
+- Can have multi-location for jobs just on configs
+- Can enter any off duty jobs (because someone doesn't like to have a job like offpolice)
+- Added one method and config to don't check all the zones to get lower usage
+- Clean coding
+
 # IMPORTANT
 
 Resources provided with this script have additional code alongside the original code to make the hud fully functional at install. If you have these resources already then make sure to remove or disable them to prevent any conflict.
@@ -13,7 +27,7 @@ Resources provided with this script have additional code alongside the original 
 # Download & Installation
 
 - Download https://github.com/BaziForYou/esx_upgraded_duty/archive/main.zip
-- Put it in `resources` folder 
+- Put it in the `resources` folder 
 
 ## Installation	
 - Add this in your `server.cfg` in the following order:
@@ -22,7 +36,7 @@ start esx_upgraded_duty
 ```
 
 ## Make off duty jobs	
-- Just need excacute like this:
+- Just need to execute like this:
 ```bash
 CreateOffDutyJob [jobname]
 CreateOffDutyJob ambulance
@@ -34,8 +48,8 @@ CreateOffDutyJob ambulance
 | Export                         | Description                               | Parameter(s)  | Return type          |
 |--------------------------------|-------------------------------------------|---------------|----------------------|
 | CheckDuty                      | Returns player is on duty or not          |               | true or false or nil |
-| GetOffDutyJobs                 | Returns list of off duty jobs             |               | table                |
-| GetOnDutyJobs                  | Returns list of on duty jobs              |               | table                |
+| GetOffDutyJobs                 | Returns a list of off duty jobs           |               | table                |
+| GetOnDutyJobs                  | Returns a list of on-duty jobs            |               | table                |
 | IsJobOnDuty                    | Returns that job is on duty job or not    | string        | true or false or nil |
 | IsJobOffDuty                   | Returns that job is off duty job or not   | string        | true or false or nil |
 
@@ -44,8 +58,8 @@ CreateOffDutyJob ambulance
 | Export                         | Description                               | Parameter(s)  | Return type          |
 |--------------------------------|-------------------------------------------|---------------|----------------------|
 | CheckDuty                      | Returns player id is on duty or not       | int           | true or false or nil |
-| GetOffDutyJobs                 | Returns list of off duty jobs             |               | table                |
-| GetOnDutyJobs                  | Returns list of on duty jobs              |               | table                |
+| GetOffDutyJobs                 | Returns a list of off duty jobs           |               | table                |
+| GetOnDutyJobs                  | Returns a list of on-duty jobs            |               | table                |
 | IsJobOnDuty                    | Returns that job is on duty job or not    | string        | true or false or nil |
 | IsJobOffDuty                   | Returns that job is off duty job or not   | string        | true or false or nil |
 
