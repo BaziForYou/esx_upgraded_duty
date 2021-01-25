@@ -102,7 +102,7 @@ Citizen.CreateThread(function()
 				for k,v in pairs(Config.Zones) do
 					if playerjob == v.job or playerjob == v.offjob then
 						local coords = GetEntityCoords(GetPlayerPed(-1))
-						local dist = Vdist(coords, v.Pos.x, v.Pos.y, v.Pos.z)
+						local dist = #(coords - vector3(v.Pos.x, v.Pos.y, v.Pos.z))
 						if(dist <= Config.DrawDistance)then
 							Sleep = 5
 							local r,g,b = 0,255,0
