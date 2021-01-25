@@ -14,7 +14,7 @@
 
 # IMPORTANT
 
-Resources provided with this script have additional code alongside the original code to make the hud fully functional at install. If you have these resources already then make sure to remove or disable them to prevent any conflict.
+Resources provided with this script have additional code alongside the original code to make the duty fully functional at install. If you have these resources already then make sure to remove or disable them to prevent any conflict.
 
 # Resource preview
 [Video](https://streamable.com/gv66i1)
