@@ -5,7 +5,6 @@
 - Multi help options on config
 - Multi notify options on config
 - Multi-color for on and off duty
-- Multi-color for on and off duty
 - Added more locates
 - Can have multi-location for jobs just on configs
 - Can enter any off duty jobs (because someone doesn't like to have a job like offpolice)
