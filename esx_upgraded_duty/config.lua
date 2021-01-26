@@ -1,6 +1,6 @@
 Config                            = {}
 Config.DrawDistance               = 10.0
-Config.DistanceMethod             = 'Vdist'  -- Vdist / LuaMethod
+Config.DistanceMethod             = 'LuaMethod'  -- Vdist / LuaMethod
 Config.Locale                     = 'en'
 
 Config.JustCanSeeOne              = true -- If you make this false you can have any zones so near to each other but it will get higher usage
