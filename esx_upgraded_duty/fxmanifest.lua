@@ -8,6 +8,7 @@ version '1.2'
 
 server_scripts {
   '@es_extended/locale.lua',
+  '@mysql-async/lib/MySQL.lua',
   'locale/*.lua',
   'config.lua',
   'server/main.lua',
