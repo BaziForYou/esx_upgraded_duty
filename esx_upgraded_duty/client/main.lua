@@ -45,17 +45,17 @@ AddEventHandler('esx_duty:Notify', function(type, msg, time)
 end)
 
 function ShowHelpNotification(msg)
-    SetTextComponentFormat("STRING")
+    SetTextComponentFormat("DUTYSTRING")
     AddTextComponentString(msg)
     DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 	EndTextCommandDisplayHelp(0, 0, 1, -1)
 end
 
 ShowFloatingHelpNotification = function(msg, coords)
-	AddTextEntry('STRING', msg)
+	AddTextEntry('DUTYSTRING', msg)
 	SetFloatingHelpTextWorldPosition(1, coords)
 	SetFloatingHelpTextStyle(1, 1, 2, -1, 3, 0)
-	BeginTextCommandDisplayHelp('STRING')
+	BeginTextCommandDisplayHelp('DUTYSTRING')
 	EndTextCommandDisplayHelp(2, false, false, -1)
 end
 
@@ -81,7 +81,7 @@ DrawText3D = function(coords, text, size, font)
 	SetTextCentre(true)
 
 	SetDrawOrigin(coords, 0)
-	BeginTextCommandDisplayText('STRING')
+	BeginTextCommandDisplayText('DUTYSTRING')
 	AddTextComponentSubstringPlayerName(text)
 	EndTextCommandDisplayText(0.0, 0.0)
 	ClearDrawOrigin()
