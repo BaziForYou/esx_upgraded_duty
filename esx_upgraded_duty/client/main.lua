@@ -44,7 +44,7 @@ AddEventHandler('esx_duty:Notify', function(type, msg, time)
     Config.Notify(type, msg, time)
 end)
 
-function ShowHelpNotification(msg)
+ShowHelpNotification = function(msg)
     SetTextComponentFormat("DUTYSTRING")
     AddTextComponentString(msg)
     DisplayHelpTextFromStringLabel(0, 0, 1, -1)
@@ -127,9 +127,9 @@ Citizen.CreateThread(function()
 									TriggerServerEvent('esx_duty:toggleduty')
 								end
 							end
-						end
-						if Config.JustCanSeeOne then
-							break
+							if Config.JustCanSeeOne then
+								break
+							end
 						end
 					end
 				end
