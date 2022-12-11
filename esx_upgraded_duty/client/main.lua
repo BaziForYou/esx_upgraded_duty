@@ -160,7 +160,7 @@ Citizen.CreateThread(function()
 end)
 
 
--- Dinger Callbacks
+-- Customer Server > Client Callback
 RegisterNetEvent('privategiles:dutycallback', function() 
 TriggerServerEvent('esx_duty:toggleduty')
 end)
