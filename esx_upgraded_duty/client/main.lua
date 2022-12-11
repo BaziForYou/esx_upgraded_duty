@@ -113,18 +113,34 @@ Citizen.CreateThread(function()
 							local r,g,b = 0,255,0
 							local duty = _U('duty1')
 							if playerjob == v.offjob then duty = _U('duty2') r,g,b = 255,0,0 end
-							DrawMarker(6, v.Pos.x, v.Pos.y, v.Pos.z - 0.975, 0.0, 0.0, 0.0, -90.0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, r,g,b, 100, false, true, 2, false, false, false, false)
+							--DrawMarker(6, v.Pos.x, v.Pos.y, v.Pos.z - 0.975, 0.0, 0.0, 0.0, -90.0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, r,g,b, 100, false, true, 2, false, false, false, false)
 							if(dist <= v.Size.x)then
 								if Config.HelpText == '3DText' then
 									DrawText3D(vector3(v.Pos.x, v.Pos.y, v.Pos.z),duty,0.75)
 								elseif Config.HelpText == 'Floating' then
-									ShowFloatingHelpNotification(duty,vector3(v.Pos.x, v.Pos.y, v.Pos.z))
+									--ShowFloatingHelpNotification(duty,vector3(v.Pos.x, v.Pos.y, v.Pos.z))
+									exports.ox_target:addBoxZone({
+                                    coords = vec3(v.Pos.x, v.Pos.y, v.Pos.z),
+                                    size = vec3(2, 2, 2),
+                                    rotation = 45,
+                                    debug = drawZones,
+                                    options = {
+                                    {
+                                    name = 'mydutymenu',
+                                    event = 'privategiles:dutycallback',
+                                    icon = 'fa-solid fa-box',
+                                    label = 'Duty',
+                                    canInteract = function(entity, distance, coords, name)
+                                    return true
+									end
+                                            }
+                                        }
+                                    })
 								else
-									ShowHelpNotification(duty)
+									--ShowHelpNotification(duty)
 								end
-
 								if IsControlJustPressed(0, Keys['E']) then
-									TriggerServerEvent('esx_duty:toggleduty')
+								TriggerServerEvent('esx_duty:toggleduty')
 								end
 							end
 							if Config.JustCanSeeOne then
@@ -143,7 +159,14 @@ Citizen.CreateThread(function()
     end
 end)
 
+
+-- Customer Server > Client Callback
+RegisterNetEvent('privategiles:dutycallback', function() 
+TriggerServerEvent('esx_duty:toggleduty')
+end)
+
 -- Exports
+
 
 function CheckDuty()
     local playerjob = PlayerData.job.name
